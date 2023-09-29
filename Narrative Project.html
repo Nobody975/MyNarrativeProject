@@ -1,0 +1,128 @@
+<html>
+	<head>
+		<title>Narrative Project</title>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130174335-2"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-130174335-2');
+		</script>
+		
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" href="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/engine/core/monogatari.css">
+		<link rel="stylesheet" href="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/style/error.css">
+		<link rel="stylesheet" href="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/style/main.css">
+
+		<!-- Third Party JavaScript Libraries -->
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/js/vendor/jquery.min.js"></script>
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/js/vendor/js-yaml.min.js"></script>
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/js/vendor/lodash.min.js"></script>
+
+		<!-- Monogatari JavaScript Libraries -->
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/engine/debug/debug.js"></script>
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/engine/core/monogatari.js"></script>
+		
+		<!-- Twison -->
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//twison.js"></script>
+		
+		<!-- Twine-Monogatari -->
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//twine-monogatari.js"></script>
+		
+	</head>
+	<body>
+		<noscript>
+			<div class="middle text--center">
+				<h2>JavaScript Disabled or not Supported.</h2>
+				<small>To play this game, please enable JavaScript executing or use a different browser.</small>
+			</div>
+		</noscript>
+		
+		<pre id="output" style="display: none;">
+		
+		</pre>
+		
+		<div id="storyData" style="display: none;">
+			<tw-storydata name="Narrative Project" startnode="1" creator="Twine" creator-version="2.7.1" format="twine-monogatari" format-version="0.2.0" ifid="7103A3C7-ED21-4514-B14D-F4791A5ECB17" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Start" tags="" position="300,325" size="100,100">```js
+		storage.player.name = &#39;Bob&#39;;
+```
+play music Theme
+show scene Hotel
+e Hello, {{player.name}}!
+```js
+	storage.edward_name = &#39;Edward&#39;;
+```
+show character e Normal center fadeIn
+e I&#39;m {{edward_name}}
+
+[[Test Menu -&gt;testMenu]]
+[[Test option 2 -&gt;test2]] 
+[[Or test option 3 -&gt;test3]]  </tw-passagedata><tw-passagedata pid="2" name="test2" tags="" position="500,200" size="100,100">Another test spot</tw-passagedata><tw-passagedata pid="3" name="[Storage]" tags="" position="50,75" size="100,100">player:
+	name: Player
+edward_name: &quot;Edward&quot;
+testCounter: 0
+    
+</tw-passagedata><tw-passagedata pid="4" name="test3" tags="" position="500,475" size="100,100">Just another test spot for branching top see how it works.</tw-passagedata><tw-passagedata pid="5" name="[Scenes]" tags="" position="50,200" size="100,100">Hotel: hotel.jpg</tw-passagedata><tw-passagedata pid="6" name="[Characters]" tags="" position="50,325" size="100,100">p:
+	Name: &quot;{{player.name}}
+    Color: &quot;#ff3951&quot;&quot;
+    
+e:
+	Name: &quot;{{edward_name}}&quot;
+    Color: &quot;00bfff&quot;
+    Directory: Edward
+    Images:
+    	Normal: edward.png</tw-passagedata><tw-passagedata pid="7" name="[Settings]" tags="" position="50,475" size="100,100">AssetsPath:
+	root: https://github.com/Nobody975/MyNarrativeProject/tree/main/assets</tw-passagedata><tw-passagedata pid="8" name="[Music]" tags="" position="50,600" size="100,100">Theme: Balefire.mp3</tw-passagedata><tw-passagedata pid="9" name="testMenu" tags="" position="500,325" size="100,100">[[IncrementCounter -&gt;IncrementCounter]]
+[[Decrement Counter | ? storage.testCounter &gt; 0 -&gt;DecrementCounter]]
+[[Restart -&gt;Start]]</tw-passagedata><tw-passagedata pid="10" name="IncrementCounter" tags="" position="675,275" size="100,100">```js
+	storage.testCounter++;
+```
+The counter is now {{testCounter}}
+jump testMenu</tw-passagedata><tw-passagedata pid="11" name="DecrementCounter" tags="" position="675,400" size="100,100">```js
+	storage.testCounter--;
+```
+The counter is now {{testCounter}}
+jump TestMenu</tw-passagedata></tw-storydata>
+		</div>
+		
+		<div id="monogatari">
+			<visual-novel>
+				<loading-screen></loading-screen>
+				<main-screen>
+					<main-menu></main-menu>
+				</main-screen>
+				<game-screen>
+					<dialog-log></dialog-log>
+					<text-box></text-box>
+					<quick-menu></quick-menu>
+				</game-screen>
+				<gallery-screen></gallery-screen>
+				<load-screen></load-screen>
+				<save-screen></save-screen>
+				<settings-screen></settings-screen>
+				<help-screen></help-screen>
+			</visual-novel>
+		</div>
+		
+		<div id="tw-errors">
+			<div class="icon" title="The script has errors">&#x26A0;&#xFE0F;</div>
+			<ul class="errors"></ul>
+		</div>
+		
+		<script>
+			window.twineStory = TwineMonogatari.convert();
+			console.log('Parsed story', window.twineStory);
+			if (window.twineStory.errors) {
+				console.error('Story contains errors', window.twineStory.errors);
+			}
+		</script>
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/js/options-twine.js"></script>
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/js/storage-twine.js"></script>
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/js/script-twine.js"></script>
+		<script src="https://haroldo-ok-2.github.io/twine-monogatari/v0.2.0//Monogatari/js/main.js"></script>
+	</body>
+</html>
